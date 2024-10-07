@@ -325,7 +325,7 @@ cartContainer.parentElement.addEventListener("click", (el) => {
 
 document.querySelector(".order-confirmed").addEventListener("click", (el) => {
 	el.preventDefault();
-	if (!el.target.classList.contains("btn--order")) return;
+	if (!el.target.classList.contains(".btn--order")) return;
 	desserts.forEach((obj) => updateButtonStates(obj.name, false));
 	desserts = [];
 	toggleDialogAndOverlay(".order-confirmed", false);
