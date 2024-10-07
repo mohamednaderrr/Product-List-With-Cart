@@ -232,17 +232,17 @@ function emptyCartState() {
 }
 
 function toggleDialogAndOverlay(el, isAdded) {
-	document.querySelector(el).classList.toggle("content-disable", !isAdded);
+	document.querySelector(el).classList.toggle(".content-disable", !isAdded);
 	document
 		.querySelector(".overlay")
-		.classList.toggle("content-disable", !isAdded);
+		.classList.toggle(".content-disable", !isAdded);
 }
 
 dessertsContainer.addEventListener("click", (el) => {
 	el.preventDefault();
 	let targetDessert;
 
-	if (el.target.classList.contains("btn--add-to-cart")) {
+	if (el.target.classList.contains(".btn--add-to-cart")) {
 		targetDessert =
 			el.target.parentElement.parentElement.querySelector(
 				".desserts__name"
@@ -252,7 +252,7 @@ dessertsContainer.addEventListener("click", (el) => {
 		return addDessertToCart(dessertsData, targetDessert);
 	}
 
-	if (el.target.classList.contains("btn-increment-qnt")) {
+	if (el.target.classList.contains(".btn-increment-qnt")) {
 		targetDessert =
 			el.target.parentElement.parentElement.parentElement.parentElement.querySelector(
 				".desserts__name"
@@ -265,7 +265,7 @@ dessertsContainer.addEventListener("click", (el) => {
 		return updateQuantityCounter(dessert, "increment");
 	}
 
-	if (el.target.classList.contains("btn-decrement-qnt")) {
+	if (el.target.classList.contains(".btn-decrement-qnt")) {
 		targetDessert =
 			el.target.parentElement.parentElement.parentElement.parentElement.querySelector(
 				".desserts__name"
@@ -284,8 +284,8 @@ cartContainer.parentElement.addEventListener("click", (el) => {
 	let targetDessert;
 
 	if (
-		el.target.classList.contains("btn-remove-svg") ||
-		el.target.classList.contains("btn-remove")
+		el.target.classList.contains(".btn-remove-svg") ||
+		el.target.classList.contains(".btn-remove")
 	) {
 		targetDessert =
 			el.target.parentElement.parentElement.parentElement.querySelector(
@@ -305,7 +305,7 @@ cartContainer.parentElement.addEventListener("click", (el) => {
 
 	if (calcTotalQuantity(desserts) < 1) emptyCartState();
 
-	if (el.target.classList.contains("btn--order")) {
+	if (el.target.classList.contains(".btn--order")) {
 		toggleDialogAndOverlay(".order-confirmed", true);
 
 		document.querySelector(
