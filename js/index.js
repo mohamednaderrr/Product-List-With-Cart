@@ -16,7 +16,7 @@ function getData(url) {
 	});
 }
 
-getData("/data/data.json").then((data) => {
+getData("./data/data.json").then((data) => {
 	dessertsData = data;
 	renderHTML(
 		dessertsContainer,
